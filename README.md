@@ -35,10 +35,23 @@ Building a recommender system from the ground up requires a deep technical under
 * **Pandas**: For data manipulation and analysis.
 * **Matplotlib**: For visualization
 
+## 📊 Dataset
+
+To benchmark the algorithms, I utilized the **[MovieLens Small Dataset](https://grouplens.org/datasets/movielens/)**. This dataset captures a realistic sparse matrix environment, suitable for testing collaborative filtering.
+
+* **Source**: GroupLens Research
+* **Content**: 100,000 ratings and 3,600 tag applications applied to 9,000 movies by 600 users.
+* **Structure**:
+    * `userId`: Unique identifier for the user.
+    * `movieId`: Unique identifier for the movie.
+    * `rating`: 5-star scale (0.5 - 5.0).
+* **Preprocessing**: 
+    The raw CSV log data (`userId`, `movieId`, `rating`) was transformed into a sparse **User-Item Matrix** using Pandas pivoting, where `NaN` values were imputed with `0.0` to represent missing interactions.
+
 ## 📂 Project Structure
 
 ```bash
 RecommenderSystemFromScratch/
-├── data/                  # Dataset files (e.g., MovieLens)
 ├── notebooks/             # Jupyter notebooks for experimentation
+├── Graphs/             # Loss Graphs
 └── README.md              # Project documentation
