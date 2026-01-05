@@ -37,17 +37,17 @@ Building a recommender system from the ground up requires a deep technical under
 
 ## 📊 Dataset
 
-To benchmark the algorithms, I utilized the **[MovieLens Small Dataset](https://grouplens.org/datasets/movielens/)**. This dataset captures a realistic sparse matrix environment, suitable for testing collaborative filtering.
+To benchmark the algorithms, I utilized the **[MovieLens 32M Dataset](https://grouplens.org/datasets/movielens/32m/)**. This large-scale dataset presents a significant challenge in terms of data volume and sparsity, making it an ideal candidate for testing scalable matrix factorization techniques.
 
 * **Source**: GroupLens Research
-* **Content**: 100,000 ratings and 3,600 tag applications applied to 9,000 movies by 600 users.
+* **Content**: ~32 million ratings and ~2 million tag applications applied to ~87,000 movies by ~200,000 users.
 * **Structure**:
-    * `userId`: Unique identifier for the user.
+    * `userId`: Unique identifier for the user (anonymized).
     * `movieId`: Unique identifier for the movie.
     * `rating`: 5-star scale (0.5 - 5.0).
-* **Preprocessing**: 
-    The raw CSV log data (`userId`, `movieId`, `rating`) was transformed into a sparse **User-Item Matrix** using Pandas pivoting, where `NaN` values were imputed with `0.0` to represent missing interactions.
-
+* **Preprocessing**:
+    * The raw CSV log data was transformed into sparse adjacency structures to optimize memory usage.
+    * `NaN` values are effectively treated as zero/missing during the sparse matrix operations.
 ## 📂 Project Structure
 
 ```bash
