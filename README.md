@@ -14,10 +14,10 @@ The goal of this project is to demystify the "black box" of recommendation engin
 
 Building a recommender system from the ground up requires a deep technical understanding. Key achievements in this repository include:
 
-* **Mathematical Implementation**: Manual coding of similarity measures (Cosine Similarity, Pearson Correlation) without pre-built functions.
-* **Algorithm Engineering**: "From scratch" implementation of **Collaborative Filtering** (User-User and Item-Item) and **Matrix Factorization**.
+* **Mathematical Implementation**: Manual coding of similarity measures (Cosine Similarity) without pre-built functions.
+* **Algorithm Engineering**: "From scratch" implementation of **Collaborative Filtering** using **Matrix Factorization** model.
 * **Vectorization**: Optimization of code using vector operations to handle large user-item interaction matrices efficiently.
-* **Custom Evaluation**: Implementation of prediction accuracy metrics like **RMSE** (Root Mean Squared Error) and **MAE** (Mean Absolute Error) to benchmark performance.
+* **Custom Evaluation**: Implementation of prediction accuracy metrics like **RMSE** (Root Mean Squared Error) and **MAE** (Mean Absolute Error)to benchmark performance.
 
 ## ⚙️ Features
 
