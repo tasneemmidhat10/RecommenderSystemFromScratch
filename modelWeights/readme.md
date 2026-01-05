@@ -1,4 +1,4 @@
-To make inference use the following pythin code: 
+To make inference use the following python code: 
 ```python
 import pickle
 import numpy as np
